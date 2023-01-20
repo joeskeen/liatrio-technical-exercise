@@ -22,8 +22,8 @@ data "aws_availability_zones" "available" {}
 locals {
   cluster_name = var.cluster-name
 
-  eks_managed_node_groups = [
-    {
+  eks_managed_node_groups = {
+    node1 = {
       instance_type                 = "t3.medium"
       additional_userdata           = "echo foo bar"
       subnets                       = "${join(",", module.vpc.private_subnets)}"
@@ -32,8 +32,8 @@ locals {
       asg_min_size                  = "2"
       asg_max_size                  = "3"
       root_encrypted                = ""
-    },
-  ]
+    }
+  }
 
 
   tags = {
@@ -116,7 +116,7 @@ module "vpc" {
 module "eks" {
   source                  = "terraform-aws-modules/eks/aws"
   cluster_name            = local.cluster_name
-  subnet_ids              = ["${module.vpc.private_subnets}"]
+  subnet_ids              = module.vpc.private_subnets
   tags                    = local.tags
   vpc_id                  = module.vpc.vpc_id
   eks_managed_node_groups = local.eks_managed_node_groups
