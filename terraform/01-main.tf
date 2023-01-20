@@ -1,15 +1,20 @@
 
 terraform {
   required_version = ">= 0.11.8"
+
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = ">= 2.6.0"
+    }
+    random = {
+      version = ">= 3.4.3"
+    }
+  }
 }
 
 provider "aws" {
-  version = ">= 2.6.0"
   region  = "${var.region}"
-}
-
-provider "random" {
-  version = "= 1.3.1"
 }
 
 data "aws_availability_zones" "available" {}
@@ -91,7 +96,7 @@ resource "aws_security_group" "all_worker_mgmt" {
 
 module "vpc" {
   source             = "terraform-aws-modules/vpc/aws"
-  version            = "1.60.0"
+  version            = "3.19.0"
   name               = "${var.cluster-name}-vpc"
   cidr               = "10.0.0.0/16"
   azs                = ["${data.aws_availability_zones.available.names[0]}", "${data.aws_availability_zones.available.names[1]}", "${data.aws_availability_zones.available.names[2]}"]
