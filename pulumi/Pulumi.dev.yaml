@@ -1,0 +1,7 @@
+config:
+  aws:region: us-east-2
+  liatrio-technical-exercise:desiredClusterSize: "1"
+  liatrio-technical-exercise:eksNodeInstanceType: t3.small
+  liatrio-technical-exercise:maxClusterSize: "3"
+  liatrio-technical-exercise:minClusterSize: "1"
+  liatrio-technical-exercise:vpcNetworkCidr: 10.0.0.0/16
