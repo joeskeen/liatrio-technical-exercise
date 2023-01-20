@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --watch"
   },
   "author": "",
