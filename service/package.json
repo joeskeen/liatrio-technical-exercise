@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --watch"
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --watch",
+    "docker:build": "docker build . -t simple-service",
+    "docker:run": "docker run -p 3000:3000 simple-service"
   },
   "author": "",
   "license": "ISC",
