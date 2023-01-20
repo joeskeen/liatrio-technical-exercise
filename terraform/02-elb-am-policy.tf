@@ -1,7 +1,7 @@
 
 resource "aws_iam_role_policy" "workerpolicy" {
   name = "workerRole"
-  role = "${module.eks.worker_iam_role_name}"
+  role = "${module.eks.cluster_iam_role_name}"
 
   policy = <<EOF
 {
