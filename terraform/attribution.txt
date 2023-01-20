@@ -1,0 +1,5 @@
+The Terraform files in this directory are based off of those found at
+https://github.com/aleksav/k8s-blogs/tree/master/01-setup-k8s-on-aws-eks/terraform/eks-k8s-cluster
+
+For more information, see
+https://medium.com/tsftech/kubernetes-stories-starting-with-k8s-on-aws-2c9a409bd69e
