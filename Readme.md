@@ -33,7 +33,7 @@ This project has only ever been tested in a Linux environment (WSL2 Ubuntu). In 
 - **NodeJS version 18.x**: Find the binaries for your platform at <https://nodejs.org/en/download/>
 - **Docker**: Installation guide here: <https://docs.docker.com/engine/install/>
   - It's highly recommended that you configure Docker to be able to be run without using `sudo`, otherwise all of the other prerequisites must also be able to be run using `sudo`. Instructions for this can be found here: <https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user>
-- **kubectl**: 
+- **kubectl**: Follow the guide for your OS here: <https://kubernetes.io/docs/tasks/tools/#kubectl>
 - **AWS CLI**: Installation guide here: <https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html>
 - **Pulumi**: Getting started guide: <https://www.pulumi.com/docs/get-started/install/>
 
