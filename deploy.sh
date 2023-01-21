@@ -61,7 +61,11 @@ sudo permissions. In that case you have two options:
 * Run this command from an elevated (sudo) Bash session"
 
 testPrerequisite "kubectl" "which kubectl" "Follow the guide for your OS here:
-https://kubernetes.io/docs/tasks/tools/#kubectl"
+https://kubernetes.io/docs/tasks/tools/#kubectl
+
+Note that you don't need to set up minikube or any other local k8s installation.
+kubectl will complain about it not being there if you don't have it, but that's OK.
+Just having kubectl installed will be sufficient."
 
 testPrerequisite "AWS CLI" "aws --version" "Installation guide here:
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
